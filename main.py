@@ -49,6 +49,10 @@ def get_move(board, player):
             print("You have entered an invalid number. Please choose a number from 1 - 9 or type 'q' to quit")
 
 
+def computer_easy_move(board):
+    available = [i for i, c in enumerate(board) if c == " "]
+    return random.choice(available)
+
 
 def play_round():
     board = [" "] * 9
@@ -64,8 +68,13 @@ def play_round():
 
     while True:
         print_board(board)
-        move = get_move(board, current_user)
-        board[move] = current_user
+        if current_user == "X":
+            move = get_move(board, current_user)
+            board[move] = current_user
+        else:
+            print("Computer is thinking...")
+            move = computer_easy_move(board)
+            board[move] = current_user
 
         if check_win(board, current_user):
             print_board(board)
