@@ -76,13 +76,3 @@ Tic-Tac-Toe--Game/
 ├── main.py       # game logic and command-line interface
 └── README.md
 ```
-
-## Possible improvements
-
-A few good next steps for the project:
-
-- Add difficulty levels for the computer opponent
-- Keep score across multiple rounds
-- Add a two-player mode
-- Build a graphical version with Tkinter or Pygame
-- Add automated tests for move validation and win detection
